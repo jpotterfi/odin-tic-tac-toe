@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template: "info-container" 1fr
+                   "game-container" 3fr
+                   /1fr;
+}
+
+.info-container {
+    grid-area: info-container;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.player-selection {
+    align-self: center;
+}
+
+#game-text {
+    align-self: center;
+}
+
+
+
+
+.game-container {
+    grid-area: game-container;
+    display: grid;
+    grid-template: "NW N NE" 100px
+                   "MW M ME" 100px
+                   "SW S SE" 100px
+                   /100px 100px 100px;
+}
+
+
+#NW {
+    grid-area: NW;
+   
+    border-bottom: 2px black solid; 
+}
+
+#N {    
+    grid-area: N;
+    border-bottom: 2px black solid;
+    border-right: 2px black solid;
+    border-left: 2px black solid; 
+
+}
+
+#NE {
+    grid-area: NE;
+    border-bottom: 2px black solid; 
+}
+
+#MW {
+    grid-area: MW;
+    border-bottom: 2px black solid; 
+}
+
+#M {
+    grid-area: M;
+    border-right: 2px black solid;
+    border-left: 2px black solid;
+    border-bottom: 2px black solid;     
+}
+
+#ME {
+    grid-area: ME;
+    border-bottom: 2px black solid; 
+}
+
+#SW {
+    grid-area: SW;
+}
+
+#S {
+    grid-area: S;
+    border-right: 2px black solid;
+    border-left: 2px black solid;
+}
+
+#SE {
+    grid-area: SE;   
+    
+}
+

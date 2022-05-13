@@ -1,0 +1,295 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #192A31;
+    font-family: 'Quicksand', sans-serif;
+    zoom: 1.5;
+}
+
+.container {
+    display: grid;
+    grid-template: "game-info" 1fr
+                   "game-container" 3fr
+                   /1fr;
+}
+
+.game-container {
+    grid-area: game-container;
+    display: grid;
+    grid-template: "logoBox turnBox reset" 50px
+                   "NW N NE" 100px
+                   "MW M ME" 100px
+                   "SW S SE" 100px
+                   "XContainer drawsContainer OContainer" 50px
+                   /100px 100px 100px;
+    grid-gap: 10px;
+}
+
+#logoBox {
+    grid-area: logoBox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+#Tic {
+    
+    color: #30C4BE;
+    
+}
+
+#Tac {
+    
+    
+    color: #F0B237;
+}
+
+#Toe {
+    
+    color: #AAC0CB;
+}
+
+#turnBox {
+    grid-area: turnBox;
+    background-color: #203540;
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    color: #A5BBC6;
+    font-weight: 700;
+    gap: 8px;
+}
+
+#currentPlayer {
+    color: #30C4BE;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+
+
+
+#NW {
+    grid-area: NW;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #203540;
+    color: white;
+    font-size: 50px;
+    border-radius: 8px;
+    font-weight: 900;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@keyframes textGrow {
+    from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+}
+
+@keyframes textRotate  {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#N {    
+    grid-area: N;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #203540;
+    color: white;
+    font-size: 50px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    font-weight: 900;
+}
+
+#NE {
+    grid-area: NE;
+    background-color: #203540;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 50px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    font-weight: 900; 
+}
+
+#MW {
+    grid-area: MW;
+    background-color: #203540;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: 900;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+}
+
+#M {
+    grid-area: M;
+    background-color: #203540;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: 900;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);     
+}
+
+#ME {
+    grid-area: ME;
+    background-color: #203540;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: 900;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+}
+
+#SW {
+    grid-area: SW;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #203540;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: 900;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#S {
+    grid-area: S;
+    background-color: #203540;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: 900;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#SE {
+    grid-area: SE;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    background-color: #203540;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: 900;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#XContainer {
+    grid-area: XContainer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #30C4BE;
+    border-radius: 8px;
+    padding-top: 5%;
+    font-weight: 700;
+}
+
+#OContainer {
+    grid-area: OContainer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F3B136;
+    border-radius: 8px;
+    padding-top: 5%;
+    font-weight: 700;
+    
+}
+
+#drawsContainer {
+    grid-area: drawsContainer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #A8BEC9;
+    border-radius: 8px;
+    padding-top: 5%;
+    font-weight: 700;
+    
+}
+
+#XScore, #OScore, #drawsScore {
+    font-weight: 700;
+}
+
+#reset{
+    grid-area: reset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#resetButton {
+    background-color: #AAC0CB;
+    border-radius: 8px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button {
+    align-self: center;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #50be10b2;
+    color: #ffffff;
+    border-radius: 32px;
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#resetButton:hover,
+#resetButton:focus {
+    background: #ccdee7;
+}
+
+button:focus {
+    outline: 1px solid rgb(0, 0, 0);
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
